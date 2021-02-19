@@ -1,1 +1,27 @@
-{{ content }}
+<!DOCTYPE html>
+<html lang="en">
+  <head>{% for stylesheet in site.stylesheets %}
+    <link rel="stylesheet" href="{{ stylesheet }}" />{% endfor %}{% for stylesheet in page.stylesheets %}
+    <link rel="stylesheet" href="{{ stylesheet }}" />{% endfor %}
+
+    <meta charset="utf-8" />
+    <meta name="author" content="{% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}" />
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+    <meta name="robots" content="index,follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />{% if page.style %}
+
+    <style>
+{{ page.style }}    </style>{% endif %}
+
+    <title>{{ page.title }} – {% if page.url == '/' %}{{ site.tagline }}{% else %}{{ site.title }}{% endif %}</title>
+  </head>
+
+  <body class="no-js {{ page.layout }}-layout">
+{{ content }}{% for script in site.scripts %}
+    <script src="{{ script }}"></script>{% endfor %}{% for script in page.scripts %}
+    <script src="{{ script }}"></script>{% endfor %}{% if page.script %}
+
+    <script>
+{{ page.script }}    </script>{% endif %}
+  </body>
+</html>
