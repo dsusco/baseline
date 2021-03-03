@@ -1,10 +1,6 @@
 module Baseline
   module Filters
     module BreadcrumbFilters
-      def blarg(a)
-        "#{a}=========#{a}"
-      end
-
       def breadcrumb_array(url)
         url.split('/').reduce([]) { |dig_args, url_token|
           url_array = dig_args.last[0..] rescue []
