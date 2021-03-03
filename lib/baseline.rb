@@ -1,3 +1,5 @@
+require 'hash'
+
 require 'baseline/filters'
 require 'baseline/hooks'
 
