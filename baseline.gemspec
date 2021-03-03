@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files`.split($INPUT_RECORD_SEPARATOR).grep(%r!^(_includes/|_javascript/|_layouts/|_sass/|assets/|lib/|LICENSE|README|_config\.yml)!)
-  spec.require_paths = %w(_includes _javascript _layouts _sass assets lib)
+  spec.require_paths = %w(lib)
 
   spec.required_ruby_version = '>= 2.4.0'
 
