@@ -1,11 +1,19 @@
-jQuery.fn.extend({
-  id: function (prepend) {
-    prepend || (prepend = 'baseline');
+jQuery.fn.extend((function () {
+  var idCounters = {};
 
-    return this.each(function () {
-      if (typeof this.id !== 'string' || this.id === '') {
-        this.id = _.uniqueId('' + prepend + '_');
+  return {
+    id: function (prefix) {
+      prefix || (prefix = 'baseline');
+
+      if (!idCounters[prefix]) {
+        idCounters[prefix] = 0
       }
-    });
-  }
-});
+
+      return this.each(function () {
+        if (typeof this.id !== 'string' || this.id === '') {
+          this.id = '' + prefix + '_' + ++idCounters[prefix];
+        }
+      });
+    }
+  };
+}()));
