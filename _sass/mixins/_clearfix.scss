@@ -5,3 +5,7 @@
     content: '';
   }
 }
+
+.clearfix {
+  @include clearfix();
+}

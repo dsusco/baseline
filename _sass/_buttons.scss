@@ -1,5 +1,17 @@
 .button,
 #{$all-buttons} {
+  background: #eee;
+  border: .1rem solid black;
   cursor: pointer;
-    line-height: inherit;
+  font-size: 1.4rem;
+  line-height: calc(22/14);
+  margin: 0;
+  padding: 0 .4rem;
+  text-align: center;
+
+  &.disabled,
+  &[disabled] {
+    color: #888;
+    pointer-events: none;
+  }
 }
