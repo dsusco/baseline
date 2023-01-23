@@ -1,0 +1,37 @@
+@import 'content/_buttons';
+@import 'content/_code';
+@import 'content/_forms';
+@import 'content/_lists';
+@import 'content/_multimedia';
+@import 'content/_tables';
+@import 'content/_typography';
+
+.margin-bottom {
+  margin-bottom: var(--_);
+}
+.no-margin-bottom {
+  margin-bottom: 0;
+}
+
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.text-center {
+  text-align: center;
+}
+.text-justify {
+  text-align: justify;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+.text-uppercase {
+  text-transform: uppercase;
+}
+.text-lowercase {
+  text-transform: lowercase;
+}

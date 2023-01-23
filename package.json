@@ -1,6 +1,6 @@
 {
   "name": "baseline",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Assets for building the Baseline Jekyll theme.",
   "main": "index.js",
   "scripts": {
@@ -11,14 +11,14 @@
     "url": "git+https://github.com/dsusco/baseline.git"
   },
   "author": "David Susco",
-  "license": "MIT",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/dsusco/baseline/issues"
   },
   "homepage": "https://github.com/dsusco/baseline#readme",
   "dependencies": {
     "animate.css": "^4.1.1",
-    "bourbon": "^7.0.0",
+    "bourbon": "^7.2.0",
     "include-media": "^1.4.10",
     "normalize.css": "^8.0.1"
   }

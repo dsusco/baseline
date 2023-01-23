@@ -1,0 +1,15 @@
+pre {
+  @include _($_font_size_code);
+  @include margin(0 null $_);
+
+  font-family: var(--font_family_code);
+}
+
+code,
+kbd,
+samp {
+  @include _($_font_size_code, calc($_ - .1rem));
+
+  font-family: var(--font_family_code);
+}
+

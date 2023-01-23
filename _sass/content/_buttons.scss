@@ -1,0 +1,35 @@
+#{$all-buttons} {
+  background-color: var(--button_background_color);
+  border: .2rem outset var(--button_border_color);
+  border-radius: var(--button_border_radius);
+  color: var(--button_color);
+  line-height: 1;
+  height: calc(2 * $_);
+  padding: 0 .5em;
+
+  &:hover {
+    background-color: var(--button_background_color_hover);
+    border-color: var(--button_border_color_hover);
+    color: var(--button_color_hover);
+  }
+
+  &:focus {
+    @include outline();
+
+    background-color: var(--button_background_color_focus);
+    border-color: var(--button_border_color_focus);
+    color: var(--button_color_focus);
+  }
+
+  &:active {
+    background-color: var(--button_background_color_active);
+    border-color: var(--button_border_color_active);
+    color: var(--button_color_active);
+  }
+
+  &:disabled {
+    background-color: var(--button_background_color_disabled);
+    border-color: var(--button_border_color_disabled);
+    color: var(--button_color_disabled);
+  }
+}

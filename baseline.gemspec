@@ -6,14 +6,15 @@ Gem::Specification.new do |spec|
   spec.authors       = ['David Susco']
   spec.summary       = 'A Jekyll theme.'
   spec.homepage      = 'https://github.com/dsusco/baseline'
-  spec.license       = 'MIT'
+  spec.license       = 'ISC'
 
   spec.files         = `git ls-files`.split($INPUT_RECORD_SEPARATOR).grep(%r!^(_includes/|_javascript/|_layouts/|_sass/|lib/|LICENSE|README|_config\.yml)!)
   spec.require_paths = %w(lib)
 
   spec.required_ruby_version = '>= 2.4.0'
 
-  spec.add_runtime_dependency 'jekyll', '~> 4.2.1'
+  spec.add_runtime_dependency 'jekyll', '~> 4.3.1'
+  spec.add_runtime_dependency 'bourbon', '~> 7.2.0'
   spec.add_runtime_dependency 'jekyll-js-converter', '~> 1.0.0'
 
   spec.add_development_dependency 'bundler'

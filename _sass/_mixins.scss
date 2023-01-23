@@ -1,5 +1,15 @@
 @import 'mixins/_';
 @import 'mixins/clearfix';
-@import 'mixins/font-awesome';
 @import 'mixins/outline';
 @import 'mixins/sr-only';
+
+.clearfix {
+  @include clearfix();
+}
+
+.sr-only {
+  @include sr-only();
+}
+.sr-only-focusable {
+  @include sr-only-focusable();
+}

@@ -1,0 +1,96 @@
+address {
+  @include _($_font_size);
+
+  margin-bottom: var(--_);
+}
+
+blockquote {
+  @include _($_font_size);
+
+  margin: 0 2rem var(--_);
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  @include margin(0 null $_);
+
+  font-family: var(--font_family_h);
+  font-weight: bold;
+
+  small, .small {
+    font-weight: normal;
+    line-height: 1;
+  }
+}
+
+h1, .h1 {
+  @include _($_font_size_h1);
+}
+
+h2, .h2 {
+  @include _($_font_size_h2);
+}
+
+h3, .h3 {
+  @include _($_font_size_h3);
+}
+
+h4, .h4 {
+  @include _($_font_size_h4);
+}
+
+h5, .h5 {
+  @include _($_font_size_h5);
+}
+
+h6, .h6 {
+  @include _($_font_size_h6);
+}
+
+p, .text {
+  @include _($_font_size);
+  @include margin(0 null $_);
+}
+
+hr {
+  @include margin(0 null ($_ - .1rem));
+
+  border: 0;
+  border-top: .1rem solid var(--body_color);
+}
+
+a {
+  &:link {
+    color: var(--link_color);
+  }
+
+  &:visited {
+    color: var(--link_visited_color);
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: var(--link_focus_color);
+  }
+
+  &[href]:focus {
+    @include outline();
+  }
+}
+
+.large {
+  font-size: var(--font_size_large_percentage);
+}
+
+small, .small {
+  font-size: var(--font_size_small_percentage);
+}
+
+sub, sup {
+  font-size: var(--font_size_small_percentage);
+}
