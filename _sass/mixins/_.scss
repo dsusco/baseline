@@ -1,4 +1,5 @@
 @mixin _($font_size: $_font_size, $line_height: $_) {
   font-size: $font_size;
   line-height: ceil(calc($font_size / $line_height)) * calc($line_height / $font_size);
+  vertical-align: bottom;
 }
