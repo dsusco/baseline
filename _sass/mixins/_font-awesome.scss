@@ -1,29 +1,11 @@
-@mixin font-awesome($content: '', $font_size: inherit, $line_height: inherit) {
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: normal;
-  font-size: $font_size;
-  font-family: FontAwesome;
-  line-height: $line_height;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  &::before {
-    content: $content;
-  }
-}
-
-@mixin font-awesome-pseudo($content: '', $font_size: inherit, $line_height: inherit) {
+@mixin font-awesome($content: '') {
   content: $content;
-  display: inline-block;
+  display: var(--fa-display, inline-block);
+  font-family: var(--fa-style-family, 'FontAwesome');
   font-style: normal;
   font-variant: normal;
-  font-weight: normal;
-  font-size: $font_size;
-  font-family: FontAwesome;
-  line-height: $line_height;
+  font-weight: var(--fa-style, 900);
+  line-height: 1;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
