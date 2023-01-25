@@ -1,20 +1,27 @@
 $_: 1.2rem !default;
 $_half_ceil: calc(ceil(calc($_ / 2 * 10)) / 10) !default;
-$_half_floor: calc(floor(calc($_ / 2 * 10)) / 10) !default;
+$_half_floor: $_ - $_half_ceil !default;
 
 $_font_size: 1.6rem !default;
 $_font_size_code: 1.5rem !default;
-
 $_font_size_h1: $_font_size * 2 !default;
 $_font_size_h2: $_font_size * 1.75 !default;
 $_font_size_h3: $_font_size * 1.5 !default;
 $_font_size_h4: $_font_size * 1.25 !default;
 $_font_size_h5: $_font_size !default;
 $_font_size_h6: $_font_size * .75 !default;
+$_font_size_large_percentage: 125% !default;
+$_font_size_large: $_font_size * calc($_font_size_large_percentage / 100%) !default;
+$_font_size_small_percentage: 75% !default;
+$_font_size_small: $_font_size * calc($_font_size_small_percentage / 100%) !default;
 
 $_line_height: 1.5 !default;
 
 :root {
+  --_: #{$_};
+  --_half_ceil: #{$_half_ceil};
+  --_half_floor: #{$_half_floor};
+
   --font_family_sans: sans-serif;
   --font_family_serif: serif;
   --font_family_mono: monospace;
@@ -31,13 +38,12 @@ $_line_height: 1.5 !default;
   --font_size_h4: #{$_font_size_h4};
   --font_size_h5: #{$_font_size_h5};
   --font_size_h6: #{$_font_size_h6};
-  --font_size_large_percentage: 125%;
-  --font_size_large: ${$_font_size} * calc($_font_size_large_percentage / 100%);
-  --font_size_small_percentage: 75%;
-  --font_size_small: ${$_font_size} * calc($_font_size_small_percentage / 100%);
+  --font_size_large_percentage: #{$_font_size_large_percentage};
+  --font_size_large: #{$_font_size_large};
+  --font_size_small_percentage: #{$_font_size_small_percentage};
+  --font_size_small: #{$_font_size_small};
 
   --line_height: #{$_line_height};
-  --_: #{$_};
 
   // Colors
   --body_background_color: #fff;
