@@ -72,14 +72,16 @@ a {
     color: var(--link_visited_color);
   }
 
-  &:hover,
-  &:active,
-  &:focus {
-    color: var(--link_focus_color);
-  }
+  &[href] {
+    &:hover,
+    &:active,
+    &:focus {
+      color: var(--link_focus_color);
+    }
 
-  &[href]:focus {
-    @include outline();
+    &:focus {
+      @include outline();
+    }
   }
 }
 
