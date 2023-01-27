@@ -88,4 +88,12 @@ $_line_height: 1.5 !default;
   --link_focus_color: #00f;
 
   --outline_color: #9cf;
+
+  // Rails Colors
+  --create_background_color: #cfc;
+  --create_border_color: #3c3;
+  --update_background_color: #cff;
+  --update_border_color: #3cc;
+  --destroy_background_color: #fcc;
+  --destroy_border_color: #c33;
 }
