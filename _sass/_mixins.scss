@@ -1,8 +1,9 @@
 @import 'mixins/_';
-@import 'mixins/clearfix';
-@import 'mixins/font-awesome';
-@import 'mixins/outline';
-@import 'mixins/sr-only';
+@import 'mixins/_after_border';
+@import 'mixins/_clearfix';
+@import 'mixins/_font-awesome';
+@import 'mixins/_outline';
+@import 'mixins/_sr-only';
 
 .clearfix {
   @include clearfix();
