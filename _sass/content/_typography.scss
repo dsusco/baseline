@@ -74,14 +74,15 @@ a {
 
   &[href] {
     &:hover,
-    &:active,
-    &:focus {
+    &:active {
       color: var(--link_focus_color);
     }
+  }
 
-    &:focus {
-      @include outline();
-    }
+  &:focus {
+    @include outline();
+
+    color: var(--link_focus_color);
   }
 }
 
