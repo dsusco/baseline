@@ -1,4 +1,4 @@
-@mixin font-awesome($content: '') {
+@mixin font_awesome($content: '') {
   content: $content;
   display: var(--fa-display, inline-block);
   font-family: var(--fa-style-family, 'FontAwesome');

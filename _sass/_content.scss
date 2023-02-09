@@ -6,32 +6,32 @@
 @import 'content/_tables';
 @import 'content/_typography';
 
-.margin-bottom {
+._margin_bottom {
   margin-bottom: var(--_);
 }
-.no-margin-bottom {
+._no_margin_bottom {
   margin-bottom: 0;
 }
 
-.text-left {
+._text_left {
   text-align: left;
 }
-.text-right {
+._text_right {
   text-align: right;
 }
-.text-center {
+._text_center {
   text-align: center;
 }
-.text-justify {
+._text_justify {
   text-align: justify;
 }
 
-.text-capitalize {
+._text_capitalize {
   text-transform: capitalize;
 }
-.text-uppercase {
+._text_uppercase {
   text-transform: uppercase;
 }
-.text-lowercase {
+._text_lowercase {
   text-transform: lowercase;
 }

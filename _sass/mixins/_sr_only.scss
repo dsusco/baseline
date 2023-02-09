@@ -1,4 +1,4 @@
-@mixin sr-only() {
+@mixin sr_only() {
   border: 0;
   clip: rect(0, 0, 0, 0);
   height: 1px;
@@ -10,8 +10,8 @@
   width: 1px;
 }
 
-@mixin sr-only-focusable() {
+@mixin sr_only_focusable() {
   &:not(:focus):not(:focus-within) {
-    @include sr-only();
+    @include sr_only();
   }
 }

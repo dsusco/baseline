@@ -1,18 +1,18 @@
 @import 'mixins/_';
 @import 'mixins/_after_border';
 @import 'mixins/_clearfix';
-@import 'mixins/_font-awesome';
+@import 'mixins/_font_awesome';
 @import 'mixins/_max_width_container';
 @import 'mixins/_outline';
-@import 'mixins/_sr-only';
+@import 'mixins/_sr_only';
 
-.clearfix {
+._clearfix {
   @include clearfix();
 }
 
-.sr-only {
-  @include sr-only();
+._sr_only {
+  @include sr_only();
 }
-.sr-only-focusable {
-  @include sr-only-focusable();
+._sr_only_focusable {
+  @include sr_only_focusable();
 }
