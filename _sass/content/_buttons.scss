@@ -27,7 +27,9 @@
     color: var(--button_color_active);
   }
 
-  &:disabled {
+  &.disabled,
+  &:disabled,
+  &[disabled='disabled'] {
     background-color: var(--button_background_color_disabled);
     border-color: var(--button_border_color_disabled);
     color: var(--button_color_disabled);
