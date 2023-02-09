@@ -1,6 +1,4 @@
 table {
-  @include _($_font_size);
-
   margin-bottom: var(--_);
   width: 100%;
 }

@@ -1,6 +1,5 @@
 dl, ol, ul {
-  @include _($_font_size);
-  @include margin(0 null $_);
+  @include margin(0 null var(--_));
 
   & & {
     margin-bottom: 0;

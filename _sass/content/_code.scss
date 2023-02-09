@@ -1,6 +1,6 @@
 pre {
-  @include _($_font_size_code);
-  @include margin(0 null $_);
+  @include _(var(--font_size_code));
+  @include margin(0 null var(--_));
 
   font-family: var(--font_family_code);
 }
@@ -8,8 +8,9 @@ pre {
 code,
 kbd,
 samp {
-  @include _($_font_size_code, calc($_ - .1rem));
+  @include _(var(--font_size_code), 2);
 
   font-family: var(--font_family_code);
+  vertical-align: bottom;
 }
 

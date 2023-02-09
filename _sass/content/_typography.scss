@@ -1,12 +1,8 @@
 address {
-  @include _($_font_size);
-
   margin-bottom: var(--_);
 }
 
 blockquote {
-  @include _($_font_size);
-
   margin: 0 2rem var(--_);
 }
 
@@ -16,7 +12,7 @@ h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-  @include margin(0 null $_);
+  @include margin(0 null var(--_));
 
   font-family: var(--font_family_h);
   font-weight: bold;
@@ -28,36 +24,35 @@ h6, .h6 {
 }
 
 h1, .h1 {
-  @include _($_font_size_h1);
+  @include _(var(--font_size_h1), 3);
 }
 
 h2, .h2 {
-  @include _($_font_size_h2);
+  @include _(var(--font_size_h2), 3);
 }
 
 h3, .h3 {
-  @include _($_font_size_h3);
+  @include _(var(--font_size_h3), 2);
 }
 
 h4, .h4 {
-  @include _($_font_size_h4);
+  @include _(var(--font_size_h4), 2);
 }
 
 h5, .h5 {
-  @include _($_font_size_h5);
+  @include _(var(--font_size_h5), 2);
 }
 
 h6, .h6 {
-  @include _($_font_size_h6);
+  @include _(var(--font_size_h6), 1);
 }
 
 p, .text {
-  @include _($_font_size);
-  @include margin(0 null $_);
+  @include margin(0 null var(--_));
 }
 
 hr {
-  @include margin(0 null ($_ - .1rem));
+  @include margin(0 null calc(var(--_) - .1rem));
 
   border: 0;
   border-top: .1rem solid var(--body_color);
