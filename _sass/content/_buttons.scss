@@ -5,12 +5,21 @@
   color: var(--button_color);
   line-height: 1;
   height: calc(2 * var(--_));
+  max-width: 100%;
+  overflow: hidden;
   padding: 0 .5em;
+  white-space: nowrap;
 
   &:hover {
     background-color: var(--button_background_color_hover);
     border-color: var(--button_border_color_hover);
     color: var(--button_color_hover);
+  }
+
+  &:active {
+    background-color: var(--button_background_color_active);
+    border-color: var(--button_border_color_active);
+    color: var(--button_color_active);
   }
 
   &:focus {
@@ -21,17 +30,12 @@
     color: var(--button_color_focus);
   }
 
-  &:active {
-    background-color: var(--button_background_color_active);
-    border-color: var(--button_border_color_active);
-    color: var(--button_color_active);
-  }
-
-  &.disabled,
+  &._disabled,
   &:disabled,
   &[disabled='disabled'] {
     background-color: var(--button_background_color_disabled);
     border-color: var(--button_border_color_disabled);
     color: var(--button_color_disabled);
+    pointer-events: none;
   }
 }

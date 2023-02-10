@@ -92,6 +92,11 @@ pre {
 }
 
 // Forms
+fieldset {
+  border: 0; // Don't affect page layout.
+  min-width: 0; // Behave like a standard block element.
+}
+
 label {
   display: inline-block; // Allow labels to use `margin` for spacing.
 }

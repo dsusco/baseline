@@ -3,10 +3,16 @@ form {
 }
 
 fieldset {
-  border: .1rem solid var(--body_color);
+  @include after_border();
+
+  border: 0;
+  padding: 0 1rem var(--_);
   margin: 0 0 var(--_);
-  min-width: 0;
-  padding: 0 1rem calc(var(--_) - .1rem);
+
+  &::after {
+    top: calc(-1 * var(--_));
+    z-index: -1;
+  }
 
   > :last-child {
     margin-bottom: 0;
@@ -14,6 +20,7 @@ fieldset {
 }
 
 legend {
+  background-color: var(--body_background_color);
   padding: 0 .5rem;
 }
 
@@ -31,6 +38,12 @@ select {
     color: var(--input_color_hover);
   }
 
+  &:active {
+    background-color: var(--input_background_color_active);
+    border-color: var(--input_border_color_active);
+    color: var(--input_color_active);
+  }
+
   &:focus {
     @include outline();
 
@@ -39,18 +52,13 @@ select {
     color: var(--input_color_focus);
   }
 
-  &:active {
-    background-color: var(--input_background_color_active);
-    border-color: var(--input_border_color_active);
-    color: var(--input_color_active);
-  }
-
-  &.disabled,
+  &._disabled,
   &:disabled,
   &[disabled='disabled'] {
     background-color: var(--input_background_color_disabled);
     border-color: var(--input_border_color_disabled);
     color: var(--input_color_disabled);
+    pointer-events: none;
   }
 }
 
@@ -60,6 +68,5 @@ select {
 
 textarea {
   height: auto;
-  padding: .2rem .25em;
-  margin: calc(var(--_half_ceil) - .4rem) 0 calc(var(--_half_floor) - .4rem);
+  padding: calc(var(--_half_ceil) - .2rem) .25em calc(var(--_half_floor) - .2rem);
 }
