@@ -52,10 +52,12 @@ p, ._text {
 }
 
 hr {
-  @include margin(0 null calc(var(--_) - .1rem));
+  @include margin(0 null);
 
   border: 0;
   border-top: .1rem solid var(--body_color);
+  box-sizing: border-box;
+  height: var(--_);
 }
 
 a {
