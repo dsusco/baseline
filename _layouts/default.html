@@ -17,7 +17,7 @@
     <title>{% if page.url != '/' %}{{ page.title }} – {% endif %}{{ site.title }}</title>
   </head>
 
-  <body class="no-js {{ page.layout }}-layout">
+  <body class="_no_js _{{ page.layout }}_layout">
 {{ content }}{% for script in site.scripts %}
     <script src="{{ script }}"></script>{% endfor %}{% for script in layout.scripts %}
     <script src="{{ script }}"></script>{% endfor %}{% for script in page.scripts %}
