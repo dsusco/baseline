@@ -52,9 +52,7 @@ select {
     color: var(--input_color_focus);
   }
 
-  &._disabled,
-  &:disabled,
-  &[disabled='disabled'] {
+  &:disabled {
     background-color: var(--input_background_color_disabled);
     border-color: var(--input_border_color_disabled);
     color: var(--input_color_disabled);

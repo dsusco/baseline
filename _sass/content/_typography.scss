@@ -47,7 +47,7 @@ h6, ._h6 {
   @include _(var(--font_size_h6), 1);
 }
 
-p, ._text {
+p, ._p {
   @include margin(0 null var(--_));
 }
 
