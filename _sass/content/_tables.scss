@@ -4,16 +4,16 @@ table {
 }
 
 caption {
-  font-weight: bold;
+  font-weight: var(--font_weight_bold);
 }
 
 thead th {
-  font-weight: bold;
+  font-weight: var(--font_weight_bold);
   vertical-align: bottom;
 }
 
 td, th {
-  padding: 0 .25em;
+  padding: var(--table_cell_padding);
   vertical-align: top;
 
   > dl,
@@ -23,14 +23,5 @@ td, th {
     &:last-child {
       margin-bottom: 0;
     }
-  }
-}
-
-._responsive_table_wrapper {
-  margin-bottom: var(--_);
-  overflow-x: auto;
-
-  > table:last-child {
-    margin-bottom: 0;
   }
 }

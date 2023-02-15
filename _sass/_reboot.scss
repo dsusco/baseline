@@ -29,16 +29,15 @@
 
 html {
   font-size: x-small; // 1rem == 10px
-  line-height: var(--line_height);
 }
 
 body {
+  @include _();
+
   background-color: var(--body_background_color); // Best practice.
   color: var(--body_color);
   font-family: var(--font_family);
-  font-size: var(--font_size);
   font-weight: normal;
-  line-height: var(--line_height);
   text-align: left;
 
   -webkit-text-size-adjust: 100%; // Prevent adjustments of font size after orientation changes in iOS.
@@ -209,6 +208,15 @@ th {
 }
 
 // Typography
+address {
+  font-style: normal;
+  line-height: inherit;
+}
+
+hr {
+  box-sizing: border-box;
+}
+
 a:not([href]):not([tabindex]):focus {
   outline: 0; // Plain anchors don't need an outline.
 }
@@ -216,13 +224,4 @@ a:not([href]):not([tabindex]):focus {
 abbr[title] {
   cursor: help; // Add explicit cursor to indicate changed behavior.
   text-decoration-skip-ink: none; // Prevent the text-decoration to be skipped.
-}
-
-address {
-  font-style: normal;
-  line-height: inherit;
-}
-
-mark {
-  background-color: #ff0;
 }

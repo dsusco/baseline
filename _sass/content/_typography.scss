@@ -1,9 +1,9 @@
 address {
-  margin-bottom: var(--_);
+  @include margin(0 null var(--_));
 }
 
 blockquote {
-  margin: 0 2rem var(--_);
+  @include margin(0 var(--blockquote_margin_h) var(--_));
 }
 
 h1, ._h1,
@@ -15,36 +15,35 @@ h6, ._h6 {
   @include margin(0 null var(--_));
 
   font-family: var(--font_family_h);
-  font-weight: bold;
+  font-weight: var(--font_weight_h);
 
   small, ._small {
-    font-weight: normal;
-    line-height: 1;
+    font-weight: var(--font_weight);
   }
 }
 
 h1, ._h1 {
-  @include _(var(--font_size_h1), 3);
+  @include _(var(--font_size_h1), var(--font_size_h1_lines));
 }
 
 h2, ._h2 {
-  @include _(var(--font_size_h2), 3);
+  @include _(var(--font_size_h2), var(--font_size_h2_lines));
 }
 
 h3, ._h3 {
-  @include _(var(--font_size_h3), 2);
+  @include _(var(--font_size_h3), var(--font_size_h3_lines));
 }
 
 h4, ._h4 {
-  @include _(var(--font_size_h4), 2);
+  @include _(var(--font_size_h4), var(--font_size_h4_lines));
 }
 
 h5, ._h5 {
-  @include _(var(--font_size_h5), 2);
+  @include _(var(--font_size_h5), var(--font_size_h5_lines));
 }
 
 h6, ._h6 {
-  @include _(var(--font_size_h6), 1);
+  @include _(var(--font_size_h6), var(--font_size_h6_lines));
 }
 
 p, ._p {
@@ -55,9 +54,8 @@ hr {
   @include margin(0 null);
 
   border: 0;
-  border-top: .1rem solid var(--body_color);
-  box-sizing: border-box;
-  height: var(--_);
+  border-top: var(--hr_border_width) var(--hr_border_style) var(--hr_border_color);
+  height: var(--hr_height);
 }
 
 a {
@@ -70,9 +68,12 @@ a {
   }
 
   &[href] {
-    &:hover,
+    &:hover {
+      color: var(--link_hover_color);
+    }
+
     &:active {
-      color: var(--link_focus_color);
+      color: var(--link_active_color);
     }
   }
 
@@ -84,13 +85,17 @@ a {
 }
 
 ._large {
-  font-size: var(--font_size_large_percentage);
+  font-size: var(--font_size_large);
+  line-height: 1;
 }
 
-small, ._small {
-  font-size: var(--font_size_small_percentage);
+mark {
+  background-color: var(--mark_background_color);
 }
 
-sub, sup {
-  font-size: var(--font_size_small_percentage);
+small, ._small,
+sub,
+sup {
+  font-size: var(--font_size_small);
+  line-height: 1;
 }

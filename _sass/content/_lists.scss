@@ -7,9 +7,9 @@ dl, ol, ul {
 }
 
 dl dl {
-  margin-left: 1.5em;
+  margin-left: var(--dl_margin_l);
 }
 
 ol, ul {
-  padding-left: 1.5em;
+  padding-left: var(--list_padding_l);
 }

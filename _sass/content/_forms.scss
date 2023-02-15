@@ -6,7 +6,7 @@ fieldset {
   @include after_border();
 
   border: 0;
-  padding: 0 1rem var(--_);
+  padding: var(--_) var(--fieldset_padding_h);
   margin: 0 0 var(--_);
 
   &::after {
@@ -21,27 +21,21 @@ fieldset {
 
 legend {
   background-color: var(--body_background_color);
-  padding: 0 .5rem;
+  padding: var(--legend_padding_h);
 }
 
 #{$all-text-inputs},
 select {
   background-color: var(--input_background_color);
-  border: .2rem inset var(--input_border_color);
+  border: var(--input_border_width) var(--input_border_style) var(--input_border_color);
   border-radius: var(--input_border_radius);
   color: var(--input_color);
-  height: calc(var(--_) * 2);
+  height: var(--input_height);
 
   &:hover {
     background-color: var(--input_background_color_hover);
     border-color: var(--input_border_color_hover);
     color: var(--input_color_hover);
-  }
-
-  &:active {
-    background-color: var(--input_background_color_active);
-    border-color: var(--input_border_color_active);
-    color: var(--input_color_active);
   }
 
   &:focus {
@@ -50,6 +44,12 @@ select {
     background-color: var(--input_background_color_focus);
     border-color: var(--input_border_color_focus);
     color: var(--input_color_focus);
+  }
+
+  &:active {
+    background-color: var(--input_background_color_active);
+    border-color: var(--input_border_color_active);
+    color: var(--input_color_active);
   }
 
   &:disabled {
@@ -61,10 +61,28 @@ select {
 }
 
 #{$all-text-inputs} {
-  padding: 0 .25em;
+  padding: var(--input_padding);
+}
+
+input[type='checkbox'],
+input[type='radio'],
+input[type='range'] {
+  &:focus {
+    @include outline();
+  }
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+  vertical-align: baseline;
+}
+
+input[type='range'] {
+  vertical-align: text-top;
 }
 
 textarea {
   height: auto;
-  padding: calc(var(--_half_ceil) - .2rem) .25em calc(var(--_half_floor) - .2rem);
+  padding: calc(var(--_half_ceil) - var(--input_border_width)) var(--textarea_padding_h) calc(var(--_half_floor) - var(--input_border_width));
 }
+

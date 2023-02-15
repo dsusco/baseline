@@ -5,33 +5,3 @@
 @import 'content/_multimedia';
 @import 'content/_tables';
 @import 'content/_typography';
-
-._margin_bottom {
-  margin-bottom: var(--_);
-}
-._no_margin_bottom {
-  margin-bottom: 0;
-}
-
-._text_left {
-  text-align: left;
-}
-._text_right {
-  text-align: right;
-}
-._text_center {
-  text-align: center;
-}
-._text_justify {
-  text-align: justify;
-}
-
-._text_capitalize {
-  text-transform: capitalize;
-}
-._text_uppercase {
-  text-transform: uppercase;
-}
-._text_lowercase {
-  text-transform: lowercase;
-}
