@@ -142,8 +142,8 @@ $_half_floor: $_ - $_half_ceil !default;
   --link_color: #00e;
   --link_visited_color: #528;
   --link_hover_color: #00f;
-  --link_active_color: #00f;
-  --link_focus_color: #00f;
+  --link_focus_color: var(--link_hover_color);
+  --link_active_color: var(--link_hover_color);
 
   --mark_background_color: #ff0;
 }
