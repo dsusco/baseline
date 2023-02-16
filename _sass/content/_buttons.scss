@@ -5,10 +5,7 @@
   color: var(--button_color);
   height: var(--button_height);
   line-height: 1;
-  max-width: 100%;
-  overflow: hidden;
   padding: var(--button_padding);
-  white-space: nowrap;
 
   &:hover {
     background-color: var(--button_background_color_hover);
