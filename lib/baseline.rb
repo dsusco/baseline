@@ -5,9 +5,9 @@ module Baseline
     require 'baseline/filters'
     require 'baseline/hooks'
     require 'baseline/tags'
-  end
 
-  if defined?(Rails) && defined?(Rails::Engine)
+    require 'baseline-scss'
+  elsif defined?(Rails) && defined?(Rails::Engine)
     class Engine < ::Rails::Engine
       initializer 'baseline.paths', group: :all do |app|
         app.config.assets.paths << File.expand_path('../_sass', __dir__)
