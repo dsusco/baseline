@@ -20,5 +20,4 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rake'
   s.add_development_dependency 'rspec'
   s.add_development_dependency 'rubocop-jekyll', '~> 0.12.0'
-  s.add_development_dependency 'sass'
 end

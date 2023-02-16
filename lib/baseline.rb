@@ -20,5 +20,12 @@ module Baseline
       Sass.load_paths << File.expand_path('../_sass', __dir__)
     rescue LoadError
     end
+
+    begin
+      require 'sassc'
+
+      SassC.load_paths << File.expand_path('../_sass', __dir__)
+    rescue LoadError
+    end
   end
 end
