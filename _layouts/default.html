@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="{% value 'lang' 'en' %}">
   <head>{% for stylesheet in site.stylesheets %}
-    <link rel="stylesheet" href="{{ stylesheet }}">{% endfor %}{% for stylesheet in layout.stylesheets %}
-    <link rel="stylesheet" href="{{ stylesheet }}">{% endfor %}{% for stylesheet in page.stylesheets %}
-    <link rel="stylesheet" href="{{ stylesheet }}">{% endfor %}
+    {% include stylesheet.html stylesheet=stylesheet %}{% endfor %}{% for stylesheet in layout.stylesheets %}
+    {% include stylesheet.html stylesheet=stylesheet %}{% endfor %}{% for stylesheet in page.stylesheets %}
+    {% include stylesheet.html stylesheet=stylesheet %}{% endfor %}
 
     <meta charset="{% value 'charset' 'utf-8' %}">
     <meta name="author" content="{% value 'author' %}">
@@ -14,14 +14,14 @@
     <style>
 {{ page.style }}    </style>{% endif %}
 
-    <title>{% if page.url != '/' %}{{ page.title }} – {% endif %}{{ site.title }}</title>
+    <title>{{ page.title }}</title>
   </head>
 
   <body class="no-js {{ page.layout }}-layout">
 {{ content }}{% for script in site.scripts %}
-    <script src="{{ script }}"></script>{% endfor %}{% for script in layout.scripts %}
-    <script src="{{ script }}"></script>{% endfor %}{% for script in page.scripts %}
-    <script src="{{ script }}"></script>{% endfor %}{% if page.script %}
+    {% include script.html script=script %}{% endfor %}{% for script in layout.scripts %}
+    {% include script.html script=script %}{% endfor %}{% for script in page.scripts %}
+    {% include script.html script=script %}{% endfor %}{% if page.script %}
 
     <script>
 {{ page.script }}    </script>{% endif %}
