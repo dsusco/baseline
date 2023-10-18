@@ -53,6 +53,12 @@ select {
     border-color: var(--input_border_color_disabled);
     color: var(--input_color_disabled);
   }
+
+  &:readonly {
+    background-color: var(--input_background_color_readonly);
+    border-color: var(--input_border_color_readonly);
+    color: var(--input_color_readonly);
+  }
 }
 
 #{$all-text-inputs} {
