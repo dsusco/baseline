@@ -14,7 +14,7 @@ Gem::Specification.new do |spec|
   spec.required_ruby_version = '>= 2.4.0'
 
   spec.add_runtime_dependency 'jekyll', '~> 4.3.3'
-  spec.add_runtime_dependency 'jekyll-js-converter', '~> 1.2.0'
+  spec.add_runtime_dependency 'jekyll-js-converter', '~> 1.2.1'
 
   spec.add_development_dependency 'bundler'
   spec.add_development_dependency 'rake'
