@@ -5,6 +5,8 @@ begin
     require 'baseline/filters'
     require 'baseline/hooks'
     require 'baseline/tags'
+
+    require 'baseline-scss'
   end
 rescue
 end
