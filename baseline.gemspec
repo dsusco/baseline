@@ -15,7 +15,7 @@ Gem::Specification.new do |spec|
 
   spec.add_runtime_dependency 'jekyll', '~> 4.3.3'
   spec.add_runtime_dependency 'jekyll-js-converter', '~> 1.2.1'
-  spec.add_runtime_dependency 'baseline-scss', '~> 0.5.0'
+  spec.add_runtime_dependency 'baseline-scss', '~> 0.6.0'
 
   spec.add_development_dependency 'bundler'
   spec.add_development_dependency 'rake'
