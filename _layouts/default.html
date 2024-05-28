@@ -17,7 +17,7 @@
     <title>{{ page.title }}</title>
   </head>
 
-  <body class="no-js {{ page.layout }}-layout">
+  <body class="_no_js _{{ page.layout }}_layout">
 {{ content }}{% for script in site.scripts %}
     {% include script.html script=script %}{% endfor %}{% for script in layout.scripts %}
     {% include script.html script=script %}{% endfor %}{% for script in page.scripts %}
