@@ -1,4 +1,4 @@
-Jekyll::Hooks.register :site, :pre_render do |site|
+Jekyll::Hooks.register :site, :post_read do |site|
   # create a multi-level pages Hash, keyed off of directory/filename
   site.data['pages'] =
     site.pages.sort { |a, b| a.url <=> b.url } .reduce({}) do |hash, page|
